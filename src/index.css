@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --color-emerald-primary: #145A43;
+  --color-emerald-deep: #104735;
+  --color-emerald-secondary: #38865B;
+  --color-bg-main: #F5F1E8;
+  --color-bg-card: #FFFEFA;
+  --color-bg-secondary: #EEEAE0;
+  --color-border-subtle: #E2DDD1;
+  --color-border-strong: #D2CCB9;
+  --color-accent-saffron: #E6A23C;
+  --color-accent-amber: #D99A32;
+  --color-text-primary: #292F2C;
+  --color-text-secondary: #6B746E;
+  --color-text-muted: #929A94;
+  --color-status-success: #38865B;
+  --color-status-warning: #D99A32;
+  --color-status-danger: #C65353;
+  --color-status-info: #527A9B;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-main);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  button,
+  a[href] {
+    transition:
+      transform 150ms cubic-bezier(0.16, 1, 0.3, 1),
+      background-color 150ms ease,
+      border-color 150ms ease,
+      color 150ms ease,
+      box-shadow 150ms ease,
+      opacity 150ms ease;
+  }
+
+  button:focus-visible,
+  a[href]:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid #145A43;
+    outline-offset: 2px;
+  }
+
+  button:not(:disabled):active {
+    transform: scale(0.985);
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "SmartStock — AI Inventory & Demand Predictor",
+  "description": "AI-powered demand forecasting, seasonal trend analysis, scenario modeling, and inventory optimization for small businesses.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
